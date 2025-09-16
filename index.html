@@ -5,21 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Md. Fazlul Bari | Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header { background: #2c3e50; color: #fff; padding: 40px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5em; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header { background: linear-gradient(135deg, #2c3e50, #34495e); color: #fff; padding: 60px 20px; text-align: center; animation: fadeIn 1.2s ease-in; }
+    header h1 { margin: 0; font-size: 2.8em; }
     header p { margin: 10px 0 0; font-size: 1.2em; }
-    nav { background: #34495e; padding: 10px; text-align: center; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-    h2 { border-bottom: 2px solid #ddd; padding-bottom: 8px; margin-bottom: 20px; }
-    ul { list-style-type: none; padding: 0; }
-    ul li { margin-bottom: 10px; }
+    nav { background: #2c3e50; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #f1c40f; }
+    section { max-width: 1000px; margin: 50px auto; padding: 0 20px; animation: fadeInUp 1s ease; }
+    h2 { border-left: 5px solid #2980b9; padding-left: 10px; margin-bottom: 20px; }
     footer { background: #2c3e50; color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
-    .contact a { color: #2980b9; text-decoration: none; }
-    .skills span { display: inline-block; background: #ecf0f1; margin: 5px; padding: 8px 12px; border-radius: 5px; }
-    .project { margin-bottom: 20px; }
-    .project a { color: #2980b9; }
+    .photo { text-align: center; margin: 30px 0; }
+    .photo img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid #2980b9; transition: transform 0.3s; }
+    .photo img:hover { transform: scale(1.08); }
+    .skills-category { margin-bottom: 30px; }
+    .skills span { display: inline-block; background: #ecf0f1; margin: 6px; padding: 8px 14px; border-radius: 5px; transition: all 0.3s; }
+    .skills span:hover { background: #2980b9; color: #fff; transform: scale(1.05); }
+    .project { margin-bottom: 25px; padding: 15px; border: 1px solid #ddd; border-radius: 8px; background: #fff; transition: transform 0.3s, box-shadow 0.3s; }
+    .project:hover { transform: translateY(-5px); box-shadow: 0px 4px 12px rgba(0,0,0,0.1); }
+    .project a { color: #2980b9; font-weight: bold; text-decoration: none; }
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    @keyframes fadeInUp { from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);} }
   </style>
 </head>
 <body>
@@ -36,6 +42,11 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <div class="photo">
+    <img src="myphoto.jpg" alt="Md. Fazlul Bari">
+    <p><em>(Replace "your-photo.jpg" with your photo file)</em></p>
+  </div>
+
   <section id="about">
     <h2>About Me</h2>
     <p>Dedicated and innovative Embedded Systems Engineer with hands-on experience in microcontroller programming, AI-based image processing, and IoT solutions. Proficient in designing and implementing real-time embedded systems and sensor-based projects. Passionate about developing hardware-software solutions that drive impactful technology.</p>
@@ -43,11 +54,25 @@
 
   <section id="skills">
     <h2>Skills</h2>
-    <div class="skills">
-      <span>C++</span><span>Python</span><span>MATLAB</span><span>Embedded C</span><span>ROS</span>
-      <span>STM32</span><span>ESP32</span><span>FreeRTOS</span><span>IoT</span><span>TensorFlow</span>
-      <span>PyTorch</span><span>OpenCV</span><span>PID</span><span>LQR</span><span>Fuzzy Control</span>
-      <span>SolidWorks</span><span>Altium</span>
+    <div class="skills-category">
+      <h3>Programming</h3>
+      <div class="skills"><span>C++</span><span>Python</span><span>MATLAB</span><span>Embedded C</span><span>ROS</span><span>HTML</span></div>
+    </div>
+    <div class="skills-category">
+      <h3>Embedded Systems</h3>
+      <div class="skills"><span>STM32</span><span>ESP32</span><span>FreeRTOS</span><span>IoT</span><span>Microprocessor</span></div>
+    </div>
+    <div class="skills-category">
+      <h3>Machine Learning & Computer Vision</h3>
+      <div class="skills"><span>TensorFlow</span><span>PyTorch</span><span>Scikit-learn</span><span>Pandas</span><span>OpenCV</span></div>
+    </div>
+    <div class="skills-category">
+      <h3>Control Systems</h3>
+      <div class="skills"><span>PID</span><span>LQR</span><span>LQG</span><span>Fuzzy Control</span><span>Reinforcement Learning</span></div>
+    </div>
+    <div class="skills-category">
+      <h3>CAD & Circuit Design</h3>
+      <div class="skills"><span>Proteus</span><span>SolidWorks</span><span>Altium</span></div>
     </div>
   </section>
 
